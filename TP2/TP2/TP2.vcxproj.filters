@@ -21,9 +21,6 @@
     <ClInclude Include="Periodico.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Livro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Publicacao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -39,6 +36,9 @@
     <ClInclude Include="Biblioteca.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Livro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -48,9 +48,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Periodico.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Livro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Publicacao.cpp">
@@ -66,6 +63,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Biblioteca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Livro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
