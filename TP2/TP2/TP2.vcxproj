@@ -151,16 +151,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Biblioteca.h" />
+    <ClInclude Include="Emprestimo.h" />
+    <ClInclude Include="ItemEmprestimo.h" />
+    <ClInclude Include="Livro.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Periodico.h" />
+    <ClInclude Include="Publicacao.h" />
+    <ClInclude Include="Usuario.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Biblioteca.cpp" />
+    <ClCompile Include="Emprestimo.cpp" />
+    <ClCompile Include="ItemEmprestimo.cpp" />
+    <ClCompile Include="Livro.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Periodico.cpp" />
+    <ClCompile Include="Publicacao.cpp" />
     <ClCompile Include="TP2.cpp" />
+    <ClCompile Include="Usuario.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

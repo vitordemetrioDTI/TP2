@@ -18,12 +18,54 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Periodico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Livro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Publicacao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemEmprestimo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Emprestimo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Usuario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Biblioteca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TP2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Periodico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Livro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Publicacao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemEmprestimo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Emprestimo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Usuario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Biblioteca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
