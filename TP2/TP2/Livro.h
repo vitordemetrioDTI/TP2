@@ -1,16 +1,21 @@
 #pragma once
 #include <iostream>
 #include "Publicacao.h"
+#include <vector>
 
 class Livro : Publicacao 
 {
 public:
-	Livro();
 	~Livro();
 	void MudaQuantidade(int Valor);
+	void AdicionaListaLivros(Livro * livro);
+	void AdicionaListaLivros(Livro livro);
+	int IdLivro;
 	int qtdeExemplares;
-	char *autores;
-	Livro(int qtdeExemplares, char *autores, int codPublicacao, char *titulo, char *editora, int ano);
-	Livro(char * Autores, int CodPublicacao, char * Titulo, char * Editora, int Ano);
+	bool excluido;
+	string autores;
+	Livro(int qtdeExemplares, string autores, int codPublicacao, string titulo, string editora, int ano);
+	Livro(string  Autores, int CodPublicacao, string  Titulo, string  Editora, int Ano);
+	vector <Livro> Livros;
 };
 

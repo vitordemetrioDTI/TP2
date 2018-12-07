@@ -2,7 +2,8 @@
 #include "Livro.h"
 
 
-Livro::Livro(int QtdeExemplares, char * Autores, int CodPublicacao, char * Titulo, char * Editora, int Ano)
+
+Livro::Livro(int QtdeExemplares, string  Autores, int CodPublicacao, string  Titulo, string  Editora, int Ano)
 {
 	this->ano = Ano;
 	this->qtdeExemplares = QtdeExemplares;
@@ -10,9 +11,11 @@ Livro::Livro(int QtdeExemplares, char * Autores, int CodPublicacao, char * Titul
 	this->autores = Autores;
 	this->titulo = Titulo;
 	this->editora = Editora;
+	AdicionaListaLivros(this);
+	this->excluido = false;
 }
 
-Livro::Livro(char * Autores, int CodPublicacao, char * Titulo, char * Editora, int Ano)
+Livro::Livro(string  Autores, int CodPublicacao, string  Titulo, string  Editora, int Ano)
 {
 	this->ano = Ano;
 	this->qtdeExemplares = 0;
@@ -20,18 +23,23 @@ Livro::Livro(char * Autores, int CodPublicacao, char * Titulo, char * Editora, i
 	this->autores = Autores;
 	this->titulo = Titulo;
 	this->editora = Editora;
-}
-
-Livro::Livro()
-{
+	AdicionaListaLivros(this);
+	this->excluido = false;
 }
 
 
 Livro::~Livro()
 {
+	this->excluido = true;
 }
 
 void Livro::MudaQuantidade(int Valor)
 {
 	qtdeExemplares = qtdeExemplares + Valor;
+}
+
+void Livro::AdicionaListaLivros(Livro livro)
+{
+	 Livros.push_back(livro);
+	livro.IdLivro++;
 }

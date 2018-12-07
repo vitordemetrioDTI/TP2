@@ -6,9 +6,10 @@ class Publicacao
 public:
 	Publicacao();
 	~Publicacao();
+	int IdPublicacao;
 	int codPublicacao;
-	char *titulo;
-	char *editora;
+	string titulo;
+	string editora;
 	int ano;
 };
 

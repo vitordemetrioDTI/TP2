@@ -1,11 +1,14 @@
 #pragma once
-class Periodico
+#include "Publicacao.h"
+#include "string"
+
+class Periodico: Publicacao
 {
-public:
+public: 
 	Periodico();
-	Periodico(int numEdicao, char*mes);
+	Periodico(int numEdicao, string mes, int codPublicacao, string titulo, string editora, int ano);
 	~Periodico();
 	int numEdicao;
-	char *mes;
+	string mes;
 };
 

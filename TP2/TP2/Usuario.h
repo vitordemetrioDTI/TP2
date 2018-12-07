@@ -3,6 +3,7 @@ class Usuario
 {
 public:
     public:
+	int IdUsuario; // definido quando foir inserido na lista da classe biblioteca
     string nome;
     string cpf;
     string endereco;
@@ -11,7 +12,7 @@ public:
     time_t data;,
 
 	Usuario();
-	Usuario(String nome, string cpf,string endereco,string fone);
+	Usuario(string nome, string cpf,string endereco,string fone);
 	~Usuario();
 };
 
