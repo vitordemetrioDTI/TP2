@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include "string"
 #include "Livro.h"
+#include<stdio.h>
 
 
 Biblioteca::~Biblioteca()
@@ -61,17 +62,34 @@ void Biblioteca::ExcluiEmprestimo(Emprestimo emprestimo)
 	Emprestimos.erase[emprestimo.IdEmprestimo];
 }
 
-/*void Biblioteca::ExluiItemEmprestimo(Emprestimo emprestimo, ItemEmpretimo itemEmprestimo)
+void Biblioteca::ExluiItemEmprestimo(Emprestimo emprestimo, ItemEmprestimo itemEmprestimo)
 {
-
+	for (int i = 0; i++; i < emprestimo.Itens.size)
+	{
+		if (emprestimo.Itens[i].livro.IdLivro == itemEmprestimo.livro.IdLivro)
+		{
+			emprestimo.Itens.erase[i];
+		}
+	}
+	cout << "esse Item nao está no emprestimo selecionado" << endl;
 }
-*/
 
-
-//Deve existir um método para devolver um item (livro) de um empréstimo. Argumento: o empréstimo e o livro a ser devolvido.
+void Biblioteca::DevolveLivro(Emprestimo emprestimo, Livro livro)
+{
+	for (int i = 0; i++; i < emprestimo.Itens.size)
+	{
+		if (emprestimo.Itens[i].livro.IdLivro == livro.IdLivro)
+		{
+			emprestimo.Itens.erase[i];
+			livro.qtdeExemplares++;
+		}
+		
+	}
+	cout << "esse Item nao está no emprestimo selecionado" << endl;
+}
 //Deve existir um método para devolver todos os livros de um empréstimo. Argumento: o empréstimo.
 
-vector <Publicacao> Biblioteca::BuscaPublicacoesTitulo(string busca)
+vector <Publicacao> Biblioteca::BuscaPublicacoesTitulo(char*busca)
 {
 	vector <Publicacao> PublicacoesEncontradas;
 	for (int i = 1; i++; i < Publicacoes.size + 1)
@@ -82,7 +100,7 @@ vector <Publicacao> Biblioteca::BuscaPublicacoesTitulo(string busca)
 	}
 }
 
-vector <Publicacao> Biblioteca::BuscaPublicacoesAutor(string busca) //TODO arrumar esse carai
+vector <Publicacao> Biblioteca::BuscaPublicacoesAutor(char*busca) //TODO arrumar esse carai
 {
 	vector <Publicacao> PublicacoesEncontradas;
 	for (int i = 1; i++; i < Publicacoes.size + 1)
@@ -111,12 +129,28 @@ vector <Emprestimo> Biblioteca::ObterEmprestimos()
 }
 
 
-// Deve existir um método para gravar os dados em arquivo;
-// Deve existir um método para ler os dados armazenados em arquivo.
+void Biblioteca::EscreveArquivo(char*data)
+{
+	ofstream outfile;		//criamos objeto da classe ofstream
+	outfile.open("arq.txt");
 
+	if (outfile.is_open() && outfile.good())
+	{
+		outfile << data << endl;
+		outfile.close();
+	}
 
+}
 
-
+char*Biblioteca::LeArquivo()
+{
+	ifstream arquivo;		       
+	char*str;
+	arquivo.open("arq.txt");		//chamo função membro open
+	arquivo >> str;
+	arquivo.close();
+	return (str);
+}
 
 
 bool Biblioteca::UsuarioTemEmprestimo(Usuario usuario)
@@ -131,5 +165,13 @@ bool Biblioteca::UsuarioTemEmprestimo(Usuario usuario)
 
 bool Biblioteca::PublicacaoNaoEstaEmprestada(Publicacao publicacao)
 {
-	//TODO esperar outras classes ficarem prontas
+	for (int i = 1; i++; i < Emprestimos.size + 1)
+	{
+		for (int j = 0; j++; j < Emprestimos[i].Itens.size)
+		{
+			if (Emprestimos[i].Itens[j].livro.titulo == publicacao.titulo)
+				return true;
+		}
+	}
+	return false;
 }

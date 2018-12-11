@@ -1,6 +1,6 @@
 #pragma once
 using namespace std;
-
+#include "string"
 class Publicacao
 {
 public:
@@ -8,8 +8,8 @@ public:
 	~Publicacao();
 	int IdPublicacao;
 	int codPublicacao;
-	string titulo;
-	string editora;
+	char*titulo;
+	char*editora;
 	int ano;
 };
 
