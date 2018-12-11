@@ -6,9 +6,9 @@ class Periodico: Publicacao
 {
 public: 
 	Periodico();
-	Periodico(int numEdicao, string mes, int codPublicacao, string titulo, string editora, int ano);
+	Periodico(int numEdicao, char*mes, int codPublicacao, char*titulo, char*editora, int ano);
 	~Periodico();
 	int numEdicao;
-	string mes;
+	char*mes;
 };
 

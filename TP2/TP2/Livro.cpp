@@ -3,7 +3,7 @@
 
 
 
-Livro::Livro(int QtdeExemplares, string  Autores, int CodPublicacao, string  Titulo, string  Editora, int Ano)
+Livro::Livro(int QtdeExemplares, char* Autores, int CodPublicacao, char* Titulo, char* Editora, int Ano)
 {
 	this->ano = Ano;
 	this->qtdeExemplares = QtdeExemplares;
@@ -11,11 +11,10 @@ Livro::Livro(int QtdeExemplares, string  Autores, int CodPublicacao, string  Tit
 	this->autores = Autores;
 	this->titulo = Titulo;
 	this->editora = Editora;
-	AdicionaListaLivros(this);
 	this->excluido = false;
 }
 
-Livro::Livro(string  Autores, int CodPublicacao, string  Titulo, string  Editora, int Ano)
+Livro::Livro(char* Autores, int CodPublicacao, char* Titulo, char* Editora, int Ano)
 {
 	this->ano = Ano;
 	this->qtdeExemplares = 0;
@@ -23,10 +22,13 @@ Livro::Livro(string  Autores, int CodPublicacao, string  Titulo, string  Editora
 	this->autores = Autores;
 	this->titulo = Titulo;
 	this->editora = Editora;
-	AdicionaListaLivros(this);
 	this->excluido = false;
 }
 
+
+Livro::Livro()
+{
+}
 
 Livro::~Livro()
 {

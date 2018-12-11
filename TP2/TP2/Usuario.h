@@ -1,18 +1,19 @@
 #pragma once
+#include<time.h>
 class Usuario
 {
 public:
     public:
 	int IdUsuario; // definido quando foir inserido na lista da classe biblioteca
-    string nome;
-    string cpf;
-    string endereco;
-    string fone;
-    Iny msd
-    time_t data;,
+    char*nome;
+    char*cpf;
+    char*endereco;
+    char*fone;
+	int msd;
+    timespec data;
 
 	Usuario();
-	Usuario(string nome, string cpf,string endereco,string fone);
+	Usuario(char*nome, char*cpf,char*endereco,char*fone);
 	~Usuario();
 };
 

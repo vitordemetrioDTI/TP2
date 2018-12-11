@@ -6,7 +6,7 @@ Periodico::Periodico()
 {
 }
 
-Periodico::Periodico(int NumEdicao, string  Mes, int CodPublicacao, string Titulo, string Editora, int Ano)
+Periodico::Periodico(int NumEdicao, char* Mes, int CodPublicacao, char*Titulo, char*Editora, int Ano)
 {
 	this->numEdicao = NumEdicao;
 	this->mes = Mes;

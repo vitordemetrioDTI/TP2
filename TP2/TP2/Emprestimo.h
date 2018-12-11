@@ -1,4 +1,5 @@
 #pragma once
+#include "ItemEmprestimo.h"
 class Emprestimo
 {
 public:
@@ -9,7 +10,7 @@ public:
     vector <ItemEmprestimo> Itens;
 
 	Emprestimo();
-	Emprestimo(int numero,time_t)
+	Emprestimo(int numero, time_t);
 	~Emprestimo();
 };
 

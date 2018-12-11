@@ -19,11 +19,16 @@ public:
 	void ExcluiUsuario(Usuario usuario);
 	void ExcluiPublicacao(Publicacao publicacao);
 	void ExcluiEmprestimo(Emprestimo emprestimo);
-	vector<Publicacao> BuscaPublicacoesTitulo(string busca);
-	vector<Publicacao> BuscaPublicacoesAutor(string busca);
+	void ExluiItemEmprestimo(Emprestimo emprestimo, ItemEmprestimo itemEmprestimo);
+	void DevolveLivro(Emprestimo emprestimo, Livro livro);
+	void ExluiItemEmprestimo(Emprestimo emprestimo, ItemEmpretimo itemEmprestimo);
+	vector<Publicacao> BuscaPublicacoesTitulo(char*busca);
+	vector<Publicacao> BuscaPublicacoesAutor(char*busca);
 	vector<Usuario> ObterUsuarios();
 	vector<Publicacao> ObterPublicacoes();
 	vector<Emprestimo> ObterEmprestimos();
+	void EscreveArquivo(char*data);
+	char*LeArquivo();
 	bool UsuarioTemEmprestimo(Usuario usuario);
 	bool PublicacaoNaoEstaEmprestada(Publicacao publicacao);
 	~Biblioteca();
